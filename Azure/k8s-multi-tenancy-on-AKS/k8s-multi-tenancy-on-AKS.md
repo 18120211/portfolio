@@ -41,8 +41,10 @@ Feel free to connect! 😊
     - [Alerts and Notifications](#alerts-and-notifications)
   - [📌 What's Included](#whats-included)
   - [🎯 Conclusion](#conclusion)
+  - [📚 References](#references)
 
 ## 📌 Overview  <a id="overview"></a>  
+![multi-tenancy.pngg](./multi-tenancy.png)
 
 This project demonstrates a **multi-tenancy architecture on Azure Kubernetes Service (AKS)**, where each tenant operates in an **isolated namespace** with controlled access, resource quotas, and network policies.  
 
@@ -55,7 +57,6 @@ The onboarding process is **fully automated** using:
 
 This approach ensures **secure, scalable, and efficient management of multiple tenants** in a **single AKS cluster**, reducing operational overhead while maintaining compliance and security.  
 
-![k8s-multi-tenancy-aks.png](./k8s-multi-tenancy-aks.png)
 
 $~$
 
@@ -73,6 +74,7 @@ $~$
 $~$
 
 ## 🏗 Architecture  <a id="architecture"></a>  
+![k8s-multi-tenancy-aks.png](./k8s-multi-tenancy-aks.png)
 ### 🔹 **High-Level Workflow** <a id="high-level-workflow"></a>  
 1. **A user raises a ServiceNow request** to onboard a new tenant (namespace) in AKS.  
 2. **The request triggers an Azure DevOps Pipeline**, fetching the tenant’s configuration from **GitHub**.  
@@ -227,6 +229,8 @@ $~$
 Ensuring proper security and access control is crucial for a multi-tenant AKS environment.  
 
 ### 🔹 Role-Based Access Control (RBAC) <a id="role-based-access-control-rbac"></a>
+![k8s-multi-tenancy-rbac.png](./k8s-multi-tenancy-rbac.png)
+
 RBAC is implemented to restrict access to tenant resources. Each tenant has specific roles assigned based on their responsibilities.  
 
 Example **RBAC role binding** for tenant admins:  
@@ -253,6 +257,8 @@ roleRef:
 ---
 
 ### 🔹 Network Policies <a id="network-policies"></a>
+![k8s-multi-tenancy-network-isolation.png](./k8s-multi-tenancy-network-isolation.png)
+
 Network policies ensure proper isolation between tenants. Each tenant is restricted to its own namespace.
 
 Example **deny all external traffic** policy:
@@ -416,3 +422,34 @@ We ensure that new tenants are **provisioned efficiently**, with **proper isolat
 ✔️ **Future extensibility** allows easy integration with **GitOps, cost tracking, and multi-cluster deployments**.  
 
 This **modern AKS multi-tenancy solution** helps organizations **scale efficiently while maintaining governance and security** in a shared Kubernetes environment. 🚀  
+
+$~$
+
+## 📚 References  <a id="references"></a>  
+
+Below are useful references for implementing **Multi-Tenancy in Kubernetes on Azure**:  
+
+### 🔹 Kubernetes Documentation  
+- [Multi-Tenancy in Kubernetes](https://kubernetes.io/docs/concepts/security/multi-tenancy/) – Kubernetes multi-tenancy best practices.  
+- [Kubernetes RBAC](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) – Role-Based Access Control (RBAC) in Kubernetes.  
+
+### 🔹 Azure Kubernetes Service (AKS)  
+- [AKS Namespace Isolation](https://learn.microsoft.com/en-us/azure/aks/use-multiple-namespaces) – Best practices for namespace-based multi-tenancy.  
+- [Networking in AKS](https://learn.microsoft.com/en-us/azure/aks/concepts-network) – AKS networking concepts and configuration.  
+- [RBAC in AKS](https://learn.microsoft.com/en-us/azure/aks/azure-ad-rbac) – Implementing RBAC in Azure Kubernetes Service.  
+
+### 🔹 CI/CD & Infrastructure as Code  
+- [Terraform for AKS](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/kubernetes_cluster) – Managing AKS clusters using Terraform.  
+- [GitHub Actions for Kubernetes](https://github.com/marketplace/actions/deploy-to-kubernetes-cluster) – Using GitHub Actions for Kubernetes deployments.  
+
+### 🔹 Security & Access Control  
+- [Azure Key Vault](https://learn.microsoft.com/en-us/azure/key-vault/) – Storing sensitive credentials securely in Azure.  
+- [Kubernetes Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/) – Controlling pod communication with network policies.  
+- [Azure Policy for AKS](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/policy-for-kubernetes) – Enforcing security and compliance policies in AKS.  
+
+### 🔹 Monitoring & Logging  
+- [Azure Monitor for Containers](https://learn.microsoft.com/en-us/azure/azure-monitor/containers/container-insights-overview) – Monitoring AKS using Azure Monitor.  
+- [Prometheus & Grafana](https://prometheus.io/docs/introduction/overview/) – Observability in Kubernetes using Prometheus and Grafana.  
+- [Fluentd Logging for Kubernetes](https://docs.fluentd.org/container-deployment/kubernetes) – Centralized logging for Kubernetes clusters.  
+
+These resources provide detailed insights and best practices for **implementing multi-tenancy in AKS** with a focus on **security, automation, and monitoring**. 🚀  

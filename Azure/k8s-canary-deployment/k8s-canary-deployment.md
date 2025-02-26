@@ -30,7 +30,8 @@ Feel free to connect! 😊
   - [✅ Benefits of Canary Deployment ](#benefits-of-canary-deployment)
   - [🚀 Future Enhancements ](#future-enhancements)
   - [🎯 Conclusion ](#conclusion)
-  - [🔹 What’s Included?](#whats-included)
+  - [📌 What’s Included?](#whats-included)
+  - [📚 References](#references)
 
 
 ## Overview <a id="overview"></a>
@@ -76,6 +77,7 @@ $~$
 $~$
 
 ## 🛠 Implementation <a id="implementation"></a>
+![k8s-canary-pipeline.png](./k8s-canary-pipeline.png)
 ### Step 1: Create a Kubernetes Namespace
 ```bash
 kubectl create namespace canary-demo
@@ -284,8 +286,9 @@ This project showcases a **robust, scalable Canary Deployment strategy in Kubern
 
 📌 **Canary Deployment + Load Balancer = Safer & Smarter Deployments** 🔥
 
+$~$
 
-## 🔹 **What’s Included?** <a id="whats-included"></a>
+## 📌 **What’s Included?** <a id="whats-included"></a>
 ✔ **Step-by-step implementation**  
 ✔ **Kubernetes manifests for Canary Deployment**  
 ✔ **Traffic splitting via LoadBalancer, Istio, or Nginx**  
@@ -295,3 +298,27 @@ This project showcases a **robust, scalable Canary Deployment strategy in Kubern
 This **README.md** is **production-ready** and can be used in a **GitHub repository** or **portfolio showcase**! 🎯  
 
 Let me know if you need **customizations** or **extra details**! 🚀
+
+$~$
+
+## 📚 References <a id="references"></a>  
+
+Below are useful references for implementing **Canary Deployment in Kubernetes** and **Multi-Tenancy on AKS**:  
+
+### 🔹 Kubernetes Documentation  
+- [Kubernetes Canary Deployments](https://kubernetes.io/docs/concepts/services-networking/ingress/#canary) – Canary release strategies in Kubernetes.  
+
+### 🔹 Azure Kubernetes Service (AKS)  
+- [RBAC in AKS](https://learn.microsoft.com/en-us/azure/aks/azure-ad-rbac) – Role-based access control (RBAC) in AKS.  
+- [Networking in AKS](https://learn.microsoft.com/en-us/azure/aks/concepts-network) – How networking and load balancing work in AKS.  
+
+### 🔹 CI/CD & Infrastructure as Code  
+- [Terraform for AKS](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/kubernetes_cluster) – Managing AKS using Terraform.  
+- [GitOps with ArgoCD](https://argo-cd.readthedocs.io/en/stable/) – Automating Kubernetes deployments using GitOps.  
+
+### 🔹 Monitoring & Logging  
+- [Azure Monitor for Containers](https://learn.microsoft.com/en-us/azure/azure-monitor/containers/container-insights-overview) – Monitoring AKS with Azure Monitor.  
+- [Prometheus & Grafana](https://prometheus.io/docs/introduction/overview/) – Monitoring Kubernetes clusters with Prometheus.  
+- [Fluentd Logging for Kubernetes](https://docs.fluentd.org/container-deployment/kubernetes) – Aggregating logs in Kubernetes using Fluentd.  
+
+These resources provide in-depth knowledge and best practices for **implementing multi-tenancy and Canary deployments** in Kubernetes environments. 🚀  

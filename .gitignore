@@ -1,2 +1,5 @@
 commit.sh
 commit.ps1
+**/*.pdf
+**/*.html
+**/*.css
