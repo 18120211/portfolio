@@ -400,13 +400,13 @@ $~$
 
 This portfolio covers a **multi-tenancy implementation on Azure Kubernetes Service (AKS)** using **Terraform, Azure DevOps, and ServiceNow**. The key topics included are:  
 
-✅ **Overview & Architecture** – High-level design of the multi-tenant AKS environment.  
-✅ **Technologies Used** – Tools and platforms enabling the solution.  
-✅ **Workflow** – Step-by-step tenant onboarding process.  
-✅ **Implementation** – Setting up tenant namespaces, resource quotas, RBAC, and network policies.  
-✅ **Security & Access Control** – Protecting tenant workloads with **RBAC, Network Policies, and Azure Key Vault**.  
-✅ **Monitoring & Logging** – Using **Azure Monitor, Prometheus, and Fluentd** for observability.  
-✅ **Future Enhancements** – Potential improvements, including **GitOps, cost tracking, and multi-cluster federation**.  
+- ✅ **Overview & Architecture** – High-level design of the multi-tenant AKS environment.  
+- ✅ **Technologies Used** – Tools and platforms enabling the solution.  
+- ✅ **Workflow** – Step-by-step tenant onboarding process.  
+- ✅ **Implementation** – Setting up tenant namespaces, resource quotas, RBAC, and network policies.  
+- ✅ **Security & Access Control** – Protecting tenant workloads with **RBAC, Network Policies, and Azure Key Vault**.  
+- ✅ **Monitoring & Logging** – Using **Azure Monitor, Prometheus, and Fluentd** for observability.  
+- ✅ **Future Enhancements** – Potential improvements, including **GitOps, cost tracking, and multi-cluster federation**.  
 
 $~$
 
